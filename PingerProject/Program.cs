@@ -20,7 +20,7 @@ namespace PingerProject
             ServerAdress = configs[0];
             Timer = int.Parse(configs[1]);
             StatusFilePath = configs[2]; 
-
+             
             /* Messages de bienvenus avec la console */
             Console.Title = "PingerProject - by Coruscant11 - [OSBLC]";
             Console.WriteLine("Bienvenue dans le PingerProject de l'OSBLC.\nVeuillez appuyer sur entrée pour démarrer le programme avec pour serveur \"" + ServerAdress + "\".\n");
