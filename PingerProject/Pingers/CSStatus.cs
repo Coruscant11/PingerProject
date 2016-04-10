@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace PingerProject
 {
+    /// <summary>
+    /// Stock l'état et la map du serveur
+    /// </summary>
     struct CSStatus
     {
-        public bool Status;
-        public string Map;
+        public bool Status; // Etat
+        public string Map; // Map
     }
 }
