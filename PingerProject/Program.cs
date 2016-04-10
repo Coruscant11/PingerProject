@@ -10,7 +10,7 @@ namespace PingerProject
 {
     class Program
     {
-        public static string ServerAdress;
+        public static string ServerAdress, StatusFilePath;
         public static int Timer;
 
         static void Main(string[] args)
@@ -18,13 +18,14 @@ namespace PingerProject
             string[] configs = System.IO.File.ReadAllLines("config.txt");
             ServerAdress = configs[0];
             Timer = int.Parse(configs[1]);
+            StatusFilePath = configs[2];
 
             Console.Title = "PingerProject - by Coruscant11 - [OSBLC]";
             Console.WriteLine("Bienvenue dans le PingerProject de l'OSBLC.\nVeuillez appuyer sur entrée pour démarrer le programmeavec pour serveur \"" + ServerAdress + "\".\n");
             Console.Read();
             Console.WriteLine("Lancement du programme avec pour timer " + Timer + " secondes...\n");
 
-            StatusWriter sw = new StatusWriter("status.txt");
+            StatusWriter sw = new StatusWriter(StatusFilePath);
 
             while (true)
             {
