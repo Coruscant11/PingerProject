@@ -35,26 +35,29 @@ namespace PingerProject
         /// <param name="map">Map disponible sur le serveur CSGO</param>
         public void WriteStatus(bool vanilla, bool feedthebeast, bool teamspeak, bool ftp, bool csgo, string map)
         {
-            tw = new StreamWriter(File.OpenWrite(this.FilePath));
+            tw = new StreamWriter(File.OpenWrite(this.FilePath)); // Ouverture du fichier en écriture
 
-            tw.WriteLine("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#FFFFFF\">Minecraft Vanilla :&nbsp;&nbsp;"
+            /* Génération du fichier HTML */
+            tw.WriteLine
+                ("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#FFFFFF\">Minecraft Vanilla :&nbsp;&nbsp;"
                     + this.BoolToState(vanilla) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
-                    + this.BoolToState(feedthebeast) 
+                        + this.BoolToState(feedthebeast) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">Teamspeak : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                    + this.BoolToState(teamspeak) 
+                        + this.BoolToState(teamspeak) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">FTP : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                    + this.BoolToState(teamspeak) 
+                        + this.BoolToState(teamspeak) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">Counter-Strike : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span "
-                    + this.BoolToState(csgo) 
+                        + this.BoolToState(csgo) 
                 + "</span><br><span style=\"color:#FFFFFF\">Map CSGO : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                     + this.MapToState(map) 
-                    + "</span></p>");
+                        + "</span></p>");
 
+            /* Fermeture du flux */
             tw.Flush();
             tw.Close();
         }
