@@ -33,7 +33,7 @@ namespace PingerProject
             {
                 using (Ftp ftp = new Ftp()) // Initialisation de l'objet du FTP
                 {
-                    ftp.Connect("server.osblc.fr");  // Connection au FTP sans login
+                    ftp.Connect(this.ServerIP);  // Connection au FTP sans login
 
                     if(ftp.Connected)
                     {
