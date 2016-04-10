@@ -12,7 +12,7 @@ namespace PingerProject
         {
 
         }
-
+         
         public override bool Ping()
         {
             Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
