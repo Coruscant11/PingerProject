@@ -21,21 +21,34 @@ namespace PingerProject
         public override bool Ping()
         {
             Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
-            return this.CounterStrikeServer.Ping();
+            try
+            {
+                return this.CounterStrikeServer.Ping();
+            }
+            catch { return false; }
         }
 
         public CSStatus PingWithMap()
         {
             Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
             CSStatus status = new CSStatus();
-            status.Status = this.CounterStrikeServer.Ping();
+            try
+            {
+                status.Status = this.CounterStrikeServer.Ping();
 
-            if (status.Status)
-                status.Map = this.GetMap();
-            else
-                status.Map = "none";
+                if (status.Status)
+                    status.Map = this.GetMap();
+                else
+                    status.Map = "none";
 
-            return status;
+                return status;
+            }
+            catch {
+                CSStatus wrong = new CSStatus();
+                wrong.Status = false;
+                wrong.Map = "none";
+                return wrong;
+            }
         }
 
         public int GetPlayers()
