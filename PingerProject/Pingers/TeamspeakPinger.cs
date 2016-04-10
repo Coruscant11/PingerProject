@@ -18,7 +18,7 @@ namespace PingerProject
             Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
             MinimalisticTelnet.TelnetConnection connection = new MinimalisticTelnet.TelnetConnection(this.ServerIP, 10011);
 
-            string response = connection.Read();
+            string response = connection.Read(); 
             connection = null;
 
             if (response.Length > 0)
