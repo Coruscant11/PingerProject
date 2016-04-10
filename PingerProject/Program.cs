@@ -19,7 +19,7 @@ namespace PingerProject
             string[] configs = System.IO.File.ReadAllLines("config.txt");
             ServerAdress = configs[0];
             Timer = int.Parse(configs[1]);
-            StatusFilePath = configs[2];
+            StatusFilePath = configs[2]; 
 
             /* Messages de bienvenus avec la console */
             Console.Title = "PingerProject - by Coruscant11 - [OSBLC]";
