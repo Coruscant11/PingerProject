@@ -1,4 +1,4 @@
 ﻿80.15.195.37
 4
-C:\Users\JeanPhilippe\Documents\status.txt
-localhost
+status.txt
+server.osblc.fr

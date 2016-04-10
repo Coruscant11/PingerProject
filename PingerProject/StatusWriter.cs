@@ -37,15 +37,46 @@ namespace PingerProject
         {
             tw = new StreamWriter(File.OpenWrite(this.FilePath));
 
-            tw.WriteLine(vanilla);
-            tw.WriteLine(feedthebeast);
-            tw.WriteLine(teamspeak);
-            tw.WriteLine(ftp);
-            tw.WriteLine(csgo);
-            tw.WriteLine(map);
+            tw.WriteLine("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#FFFFFF\">Minecraft Vanilla :&nbsp;&nbsp;"
+                    + this.BoolToState(vanilla) 
+                + "<br>" 
+                    + "<span style=\"color:#FFFFFF\">Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+                    + this.BoolToState(feedthebeast) 
+                + "<br>" 
+                    + "<span style=\"color:#FFFFFF\">Teamspeak : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                    + this.BoolToState(teamspeak) 
+                + "<br>" 
+                    + "<span style=\"color:#FFFFFF\">FTP : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                    + this.BoolToState(teamspeak) 
+                + "<br>" 
+                    + "<span style=\"color:#FFFFFF\">Counter-Strike : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span "
+                    + this.BoolToState(csgo) 
+                + "</span><br><span style=\"color:#FFFFFF\">Map CSGO : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                    + this.MapToState(map) 
+                    + "</span></p>");
 
             tw.Flush();
             tw.Close();
+        }
+
+        /// <summary>
+        /// Convertis l'état du serveur en valeur a afficher dans le fichier html (avec le span color)
+        /// </summary>
+        /// <param name="value">Etat du serveur</param>
+        /// <returns>Retourne le string a afficher dans le html</returns>
+        private string BoolToState(bool value)
+        {
+            return value ? "<span style=\"color:#32CD32\">Online" : "<span style=\"color:#FF0000\">Offline";
+        }
+
+        /// <summary>
+        /// Convertis le nom d'une map en valeur a afficher dans le fichier html (avec le span color)
+        /// </summary>
+        /// <param name="map">Nom de la map</param>
+        /// <returns>Retourne le string a afficher dans le html</returns>
+        private string MapToState(string map)
+        {
+            return map.ToLower().Equals("none") ? "<span style =\"color:#FF0000\">Aucune" : "<span style =\"color:#32CD32\">" + map;
         }
     }
 }
