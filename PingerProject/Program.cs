@@ -127,7 +127,7 @@ namespace PingerProject
         {
             Console.WriteLine("------------------------------");
 
-            FTPPinger ftp = new FTPPinger("ftp://" + FTPAdress, 21, "FTP"); // Création de l'objet pinguant la classe
+            FTPPinger ftp = new FTPPinger(FTPAdress, 21, "FTP"); // Création de l'objet pinguant la classe
 
             if (ftp.Ping())
             {
