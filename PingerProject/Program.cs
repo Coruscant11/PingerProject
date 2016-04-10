@@ -10,7 +10,7 @@ namespace PingerProject
 {
     class Program
     {
-        public static string ServerAdress, StatusFilePath; // Adresse IP du serveur, Chemin du fichier d'écriture
+        public static string ServerAdress, FTPAdress, StatusFilePath; // Adresse IP du serveur, Adresse IP du FTP, Chemin du fichier d'écriture
         public static int Timer; // Temps pour sleep le Thread
 
         static void Main(string[] args)
@@ -20,7 +20,8 @@ namespace PingerProject
             ServerAdress = configs[0];
             Timer = int.Parse(configs[1]);
             StatusFilePath = configs[2]; 
-             
+            FTPAdress = configs[3];
+
             /* Messages de bienvenus avec la console */
             Console.Title = "PingerProject - by Coruscant11 - [OSBLC]";
             Console.WriteLine("Bienvenue dans le PingerProject de l'OSBLC.\nVeuillez appuyer sur entrée pour démarrer le programme avec pour serveur \"" + ServerAdress + "\".\n");
@@ -126,7 +127,7 @@ namespace PingerProject
         {
             Console.WriteLine("------------------------------");
 
-            FTPPinger ftp = new FTPPinger("ftp://" + ServerAdress, 21, "FTP"); // Création de l'objet pinguant la classe
+            FTPPinger ftp = new FTPPinger("ftp://" + FTPAdress, 21, "FTP"); // Création de l'objet pinguant la classe
 
             if (ftp.Ping())
             {
