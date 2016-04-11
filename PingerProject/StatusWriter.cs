@@ -53,7 +53,7 @@ namespace PingerProject
                         + this.BoolToState(ftp) 
                 + "<br>" 
                     + "<span style=\"color:#A8A8A8\">Counter-Strike : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                        + this.BoolToState(csgo) 
+                        + this.BoolToState(csgo)  
                 + "</span><br><span style=\"color:#A8A8A8\">Map CSGO : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                     + this.MapToState(map) 
                         + "</span></p>");
