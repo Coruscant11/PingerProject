@@ -46,7 +46,7 @@ namespace PingerProject
                     + "<span style=\"color:#A8A8A8\">Minecraft Vanilla :&nbsp;&nbsp"
                         + this.BoolToState(vanilla) 
                 + "<br>" 
-                    + "<span style=\"color:#A8A8A8\">;Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+                    + "<span style=\"color:#A8A8A8\">Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
                         + this.BoolToState(feedthebeast) 
                 + "<br>" 
                     + "<span style=\"color:#A8A8A8\">FTP : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
