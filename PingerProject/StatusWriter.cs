@@ -35,8 +35,9 @@ namespace PingerProject
         /// <param name="map">Map disponible sur le serveur CSGO</param>
         public void WriteStatus(bool vanilla, bool feedthebeast, bool teamspeak, bool ftp, bool csgo, string map)
         {
-            tw = new StreamWriter(File.OpenWrite(this.FilePath)); // Ouverture du fichier en écriture
-
+            tw = new StreamWriter(File.Open(this.FilePath, FileMode.OpenOrCreate)); // Ouverture du fichier en écriture
+            
+            
             /* Génération du fichier HTML */
             tw.WriteLine
                 ("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#FFFFFF\">Minecraft Vanilla :&nbsp;&nbsp;"
@@ -49,7 +50,7 @@ namespace PingerProject
                         + this.BoolToState(teamspeak) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">FTP : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                        + this.BoolToState(teamspeak) 
+                        + this.BoolToState(ftp) 
                 + "<br>" 
                     + "<span style=\"color:#FFFFFF\">Counter-Strike : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span "
                         + this.BoolToState(csgo) 
