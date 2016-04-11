@@ -25,16 +25,18 @@ namespace PingerProject
         /// <returns>Retourne l'état du serveur</returns>
         public override bool Ping()
         {
-            Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
-            MinimalisticTelnet.TelnetConnection connection = new MinimalisticTelnet.TelnetConnection(this.ServerIP, 10011);
+            try
+            {
+                Console.WriteLine("Connexion au serveur " + this.ServerType + "...");
+                MinimalisticTelnet.TelnetConnection connection = new MinimalisticTelnet.TelnetConnection(this.ServerIP, 10011);
 
-            string response = connection.Read(); 
-            connection = null;
+                string response = connection.Read();
+                connection = null;
 
-            if (response.Length > 0)
-                return true;
-            else
-                return false;
+                return response.Length > 0 ? true : false;
+
+            }
+            catch { return false; }
         }
     }
 }
