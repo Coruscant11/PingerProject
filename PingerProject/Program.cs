@@ -24,9 +24,8 @@ namespace PingerProject
 
             /* Messages de bienvenus avec la console */
             Console.Title = "PingerProject - by Coruscant11 - [OSBLC]";
-            Console.WriteLine("Bienvenue dans le PingerProject de l'OSBLC.\nVeuillez appuyer sur entrée pour démarrer le programme avec pour serveur \"" + ServerAdress + "\".\n");
-            Console.Read();
-            Console.WriteLine("Lancement du programme avec pour timer " + Timer + " secondes...\n");
+            Console.WriteLine("Bienvenue dans le PingerProject de l'OSBLC.\n");
+            Console.WriteLine("Lancement du programme avec pour serveur \"" + ServerAdress + "\"\nEt pour timer " + Timer + " secondes...\n");
 
             /* Initialisation du writers des données dans le fichiers status.txt */
             StatusWriter sw = new StatusWriter(StatusFilePath);
