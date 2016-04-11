@@ -40,14 +40,14 @@ namespace PingerProject
             
             /* Génération du fichier HTML */
             tw.WriteLine
-                ("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#A8A8A8\">Minecraft Vanilla :&nbsp;&nbsp;"
-                    + this.BoolToState(vanilla) 
+                ("<pcolor:#000000; font-weight:bold;style=\"font-family:Lucida Console;\"><span style=\"color:#A8A8A8\">Teamspeak : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                    + this.BoolToState(teamspeak) 
                 + "<br>" 
-                    + "<span style=\"color:#A8A8A8\">Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
+                    + "<span style=\"color:#A8A8A8\">Minecraft Vanilla :&nbsp;&nbsp"
+                        + this.BoolToState(vanilla) 
+                + "<br>" 
+                    + "<span style=\"color:#A8A8A8\">;Feed The Beast :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"
                         + this.BoolToState(feedthebeast) 
-                + "<br>" 
-                    + "<span style=\"color:#A8A8A8\">Teamspeak : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                        + this.BoolToState(teamspeak) 
                 + "<br>" 
                     + "<span style=\"color:#A8A8A8\">FTP : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                         + this.BoolToState(ftp) 
