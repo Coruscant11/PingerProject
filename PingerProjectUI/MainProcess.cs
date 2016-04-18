@@ -148,7 +148,7 @@ namespace PingerProjectUI
                 Thread.Sleep(FTBTimer * 1000);
             } while (CanRun);
         }
-
+         
         private void FTPProcess()
         {
             FTPPinger ftp = new FTPPinger(ServerAdress, 21, "FTP");
