@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingerProject", "PingerProject\PingerProject.csproj", "{28795E35-6F4F-4616-A3A9-6C25ED54E5A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingerProjectUI", "PingerProjectUI\PingerProjectUI.csproj", "{CACF732E-B550-4B13-AB02-8B196B6BA0DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{B8480173-8797-4E74-9419-3B40CDD6758D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{28795E35-6F4F-4616-A3A9-6C25ED54E5A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28795E35-6F4F-4616-A3A9-6C25ED54E5A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28795E35-6F4F-4616-A3A9-6C25ED54E5A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CACF732E-B550-4B13-AB02-8B196B6BA0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACF732E-B550-4B13-AB02-8B196B6BA0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACF732E-B550-4B13-AB02-8B196B6BA0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACF732E-B550-4B13-AB02-8B196B6BA0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8480173-8797-4E74-9419-3B40CDD6758D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8480173-8797-4E74-9419-3B40CDD6758D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8480173-8797-4E74-9419-3B40CDD6758D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8480173-8797-4E74-9419-3B40CDD6758D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
